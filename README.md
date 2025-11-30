@@ -739,7 +739,3 @@ Pour toute question ou problème :
 - [ ] Tests A/B pour l'optimisation du recrutement
 
 ---
-
-**Développé avec ❤️ pour l'industrie aéronautique**
-
-*Dernière mise à jour : Novembre 2024*
