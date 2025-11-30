@@ -686,13 +686,6 @@ docker-compose up -d
 - **FastAPI** for high-performance Python framework
 - **Node.js & Express** for solid backend ecosystem
 
-## 📞 Support
-
-For any questions or issues:
-- Open an issue on GitHub
-- Check the documentation
-- Check Docker logs for errors
-
 ## 🚀 Future Enhancements
 
 - [ ] OAuth2 authentication (Google, LinkedIn)
