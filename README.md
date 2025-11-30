@@ -1,8 +1,8 @@
-# 🚀 SkyHire - Plateforme de Recrutement Aéronautique Alimentée par l'IA
+# SkyHire - AI-Powered Aviation Recruitment Platform
 
 <div align="center">
 
-**Révolutionner le Recrutement Aéronautique avec l'Intelligence Artificielle**
+**Revolutionizing Aviation Recruitment with Artificial Intelligence**
 
 [![Node.js](https://img.shields.io/badge/Node.js-20-green.svg)](https://nodejs.org/)
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED.svg)](https://www.docker.com/)
@@ -27,79 +27,79 @@
 - [Contributing](#-contributing)
 - [License](#-license)
 
-## 🌟 Aperçu
+## 🌟 Overview
 
-**SkyHire** est une plateforme de recrutement complète alimentée par l'IA, spécialement conçue pour l'industrie aéronautique. Elle combine l'intelligence artificielle de pointe, le traitement du langage naturel et la communication en temps réel pour rationaliser le processus d'embauche pour les compagnies aériennes, les entreprises aéronautiques et les candidats au personnel de cabine.
+**SkyHire** is a comprehensive AI-powered recruitment platform specifically designed for the aviation industry. It combines cutting-edge artificial intelligence, natural language processing, and real-time communication to streamline the hiring process for airlines, aviation companies, and cabin crew candidates.
 
 ### 🎯 Mission
 
-Transformer le recrutement aéronautique en fournissant une correspondance intelligente, une analyse automatique de CV, des simulations d'entretien alimentées par l'IA et un coaching de carrière personnalisé - le tout dans une plateforme unifiée.
+Transform aviation recruitment by providing intelligent matching, automated CV analysis, AI-powered interview simulations, and personalized career coaching - all in a unified platform.
 
-## ✨ Fonctionnalités Clés
+## ✨ Key Features
 
-### 🤖 Simulateur d'Entretien Alimenté par l'IA
-- **Entretien vocal en temps réel** utilisant Google Gemini 2.5 Flash Live API
-- Conversation naturelle avec un recruteur IA spécialisé en aéronautique
-- Retour instantané sur les compétences en communication, la confiance et la pertinence
-- Questions comportementales basées sur des scénarios pour les postes de personnel de cabine
-- Audio bidirectionnel avec support audio natif
+### 🤖 AI-Powered Interview Simulator
+- **Real-time voice interview** using Google Gemini 2.5 Flash Live API
+- Natural conversation with an aviation-specialized AI recruiter
+- Instant feedback on communication skills, confidence, and relevance
+- Behavioral questions based on scenarios for cabin crew positions
+- Bidirectional audio with native audio support
 
-### 📄 Analyseur de CV Intelligent
-- Technologie OCR avancée avec CRAFT et PaddleOCR
-- Extraction automatique des informations personnelles, de l'éducation, de l'expérience et des compétences
-- NER (Named Entity Recognition) pour l'extraction de données structurées
-- Support de plusieurs formats de CV (PDF, images)
-- Correspondance intelligente avec les exigences du poste
+### 📄 Intelligent CV Analyzer
+- Advanced OCR technology with CRAFT and PaddleOCR
+- Automatic extraction of personal information, education, experience, and skills
+- NER (Named Entity Recognition) for structured data extraction
+- Support for multiple CV formats (PDF, images)
+- Intelligent matching with job requirements
 
-### 💼 Correspondance d'Emploi Intelligente
-- Moteur de recommandation d'emplois alimenté par l'IA
-- Algorithme de correspondance basé sur les compétences
-- Score de compatibilité pour chaque poste
-- Alertes et notifications d'emploi en temps réel
-- Système de suivi des candidatures
+### 💼 Smart Job Matching
+- AI-powered job recommendation engine
+- Skill-based matching algorithm
+- Compatibility score for each position
+- Real-time job alerts and notifications
+- Application tracking system
 
-### 💬 Chatbot Coach de Carrière
-- Assistant IA alimenté par Google Gemini
-- Conseils de carrière personnalisés pour les professionnels de l'aéronautique
-- Conseils et techniques de préparation aux entretiens
-- Recommandations d'optimisation de CV
-- FAQ sur les carrières du personnel de cabine
+### 💬 Career Coach Chatbot
+- AI assistant powered by Google Gemini
+- Personalized career advice for aviation professionals
+- Interview preparation tips and techniques
+- CV optimization recommendations
+- Cabin crew career FAQ
 
-### 🔐 Système d'Authentification Complet
-- Authentification sécurisée basée sur JWT
-- Contrôle d'accès basé sur les rôles (Candidat/Recruteur)
-- Gestion et personnalisation du profil
-- Intégration de connexion sociale prête
+### 🔐 Complete Authentication System
+- Secure JWT-based authentication
+- Role-based access control (Candidate/Recruiter)
+- Profile management and customization
+- Ready social login integration
 
-### 📊 Chat et Réseautage en Temps Réel
-- Messagerie en temps réel alimentée par Socket.io
-- Communication directe entre recruteurs et candidats
-- Fonctionnalités de réseautage professionnel
-- Conversations de groupe et notifications
+### 📊 Real-time Chat and Networking
+- Real-time messaging powered by Socket.io
+- Direct communication between recruiters and candidates
+- Professional networking features
+- Group conversations and notifications
 
-### 📈 Analytiques et Tableau de Bord
-- Tableau de bord candidat complet
-- Suivi de l'état des candidatures
-- Métriques de performance des entretiens
-- Analytiques recruteur pour les décisions d'embauche
+### 📈 Analytics and Dashboard
+- Comprehensive candidate dashboard
+- Application status tracking
+- Interview performance metrics
+- Recruiter analytics for hiring decisions
 
 ## 🏗️ Architecture
 
-SkyHire suit une architecture moderne de **microservices** avec plusieurs services backend Node.js et Python orchestrés avec Docker Compose.
+SkyHire follows a modern **microservices architecture** with multiple Node.js and Python backend services orchestrated with Docker Compose.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│               Serveurs Frontend (Nginx)                      │
+│               Frontend Servers (Nginx)                      │
 │  ┌──────────────────────┬──────────────────────────────┐   │
-│  │  Frontend Principal  │  Serveur d'Entretien Live    │   │
-│  │      (Port 80)       │       (Port 81)              │   │
+│  │   Main Frontend      │    Live Interview Server     │   │
+│  │      (Port 80)       │         (Port 81)            │   │
 │  └──────────────────────┴──────────────────────────────┘   │
 └────────────────────────┬────────────────────────────────────┘
                          │
                          ▼
 ┌─────────────────────────────────────────────────────────────┐
-│              API Gateway (Port 5000)                         │
-│              Routage & Équilibrage de Charge                 │
+│              API Gateway (Port 5000)                        │
+│              Routing & Load Balancing                       │
 └────────┬──────────┬──────────┬──────────┬──────────┬────────┘
          │          │          │          │          │
     ┌────▼────┐┌───▼────┐┌───▼────┐┌───▼────┐┌────▼─────┐
@@ -125,70 +125,70 @@ SkyHire suit une architecture moderne de **microservices** avec plusieurs servic
 ## 💻 Technologies
 
 ### Frontend
-- **React** - Bibliothèque UI moderne
-- **Nginx** - Serveur web pour production
-- **Socket.io Client** - Communication en temps réel
-- **Axios** - Client HTTP
+- **React** - Modern UI library
+- **Nginx** - Production web server
+- **Socket.io Client** - Real-time communication
+- **Axios** - HTTP client
 
 ### Backend Services
-- **Node.js 20** - Environnement d'exécution
-- **Express.js** - Framework web
-- **MongoDB 7.0** - Base de données NoSQL
-- **Socket.io** - Serveur WebSocket
-- **JWT** - Authentification sécurisée
-- **Mongoose** - ODM pour MongoDB
-- **Docker & Docker Compose** - Containerisation
+- **Node.js 20** - Runtime environment
+- **Express.js** - Web framework
+- **MongoDB 7.0** - NoSQL database
+- **Socket.io** - WebSocket server
+- **JWT** - Secure authentication
+- **Mongoose** - MongoDB ODM
+- **Docker & Docker Compose** - Containerization
 
-### Services IA & Python
-- **Google Gemini 2.5 Flash** - IA audio en direct pour les entretiens
-- **Google Gemini Pro** - Chatbot de coaching de carrière
-- **FastAPI** - Framework API Python haute performance
-- **PaddleOCR** - OCR pour l'analyse de CV
-- **CRAFT** - Détection de texte
-- **spaCy** - NER pour l'extraction de CV
+### AI & Python Services
+- **Google Gemini 2.5 Flash** - Live AI audio for interviews
+- **Google Gemini Pro** - Career coaching chatbot
+- **FastAPI** - High-performance Python API framework
+- **PaddleOCR** - OCR for CV analysis
+- **CRAFT** - Text detection
+- **spaCy** - NER for CV extraction
 
-### DevOps & Outils
-- **Docker** - Plateforme de conteneurs
-- **Docker Compose** - Orchestration multi-conteneurs
-- **Git** - Contrôle de version
-- **Nginx** - Serveur web et proxy inverse
+### DevOps & Tools
+- **Docker** - Container platform
+- **Docker Compose** - Multi-container orchestration
+- **Git** - Version control
+- **Nginx** - Web server and reverse proxy
 
-## 🚀 Démarrage Rapide
+## 🚀 Quick Start
 
-### Prérequis
+### Prerequisites
 
-- **Docker Desktop** installé et en cours d'exécution
-- **Git** pour le contrôle de version
-- **Clé API Google Gemini** (pour les fonctionnalités IA)
+- **Docker Desktop** installed and running
+- **Git** for version control
+- **Google Gemini API Key** (for AI features)
 
 ### Installation
 
-1. **Cloner le dépôt**
+1. **Clone the repository**
 ```bash
 git clone https://github.com/mzmantar/SkyHire.git
 cd SkyHire
 ```
 
-2. **Configurer les Variables d'Environnement**
+2. **Configure Environment Variables**
 
-Créez un fichier `.env` à la racine avec les variables suivantes :
+Create a `.env` file at the root with the following variables:
 
 ```env
-# Configuration JWT
-JWT_SECRET=votre_secret_jwt_ici
+# JWT Configuration
+JWT_SECRET=your_jwt_secret_here
 JWT_EXPIRE=7d
 
-# API Google Gemini
-GEMINI_API_LIVE_TOKEN=votre_cle_api_gemini_ici
-CHATBOT_TOKEN=votre_cle_api_gemini_ici
+# Google Gemini API
+GEMINI_API_LIVE_TOKEN=your_gemini_api_key_here
+CHATBOT_TOKEN=your_gemini_api_key_here
 
-# Configuration MongoDB
+# MongoDB Configuration
 MONGODB_URI=mongodb://mongodb:27017/skyhire
 
-# Environnement
+# Environment
 NODE_ENV=production
 
-# Ports des Services
+# Service Ports
 API_GATEWAY_PORT=5000
 AUTH_SERVICE_PORT=5001
 CHAT_SERVICE_PORT=5002
@@ -202,54 +202,54 @@ CV_PARSER_SERVICE_PORT=5010
 FRONT_SERVER_PORT=80
 INTERVIEW_SERVER_PORT=81
 
-# Configuration Upload (Service CV)
+# Upload Configuration (CV Service)
 UPLOAD_PATH=./uploads/cv
 MAX_FILE_SIZE=5242880
 ```
 
-3. **Démarrer tous les Services avec Docker Compose**
+3. **Start All Services with Docker Compose**
 ```bash
 docker-compose up -d
 ```
 
-Cette commande va :
-- Construire toutes les images Docker
-- Démarrer tous les microservices
-- Créer les réseaux et volumes nécessaires
-- Initialiser MongoDB
+This command will:
+- Build all Docker images
+- Start all microservices
+- Create necessary networks and volumes
+- Initialize MongoDB
 
-4. **Vérifier que tous les services sont en cours d'exécution**
+4. **Verify All Services Are Running**
 ```bash
 docker-compose ps
 ```
 
-Vous devriez voir tous les services avec le statut `Up`.
+You should see all services with status `Up`.
 
-5. **Accéder à l'Application**
+5. **Access the Application**
 
-- **Frontend Principal** : http://localhost
-- **Interface d'Entretien** : http://localhost:81
-- **API Gateway** : http://localhost:5000
-- **API Chatbot** : http://localhost:8000
-- **MongoDB** : mongodb://localhost:27017
+- **Main Frontend**: http://localhost
+- **Interview Interface**: http://localhost:81
+- **API Gateway**: http://localhost:5000
+- **Chatbot API**: http://localhost:8000
+- **MongoDB**: mongodb://localhost:27017
 
-## 📁 Structure du Projet
+## 📁 Project Structure
 
 ```
 skyhire-docker/
-├── docker-compose.yml           # Orchestration de tous les services
-├── Dockerfile                   # Dockerfile principal (Docker-in-Docker)
-├── .env                         # Variables d'environnement (à créer)
-├── .gitignore                   # Fichiers Git à ignorer
-├── README.md                    # Cette documentation
+├── docker-compose.yml           # All services orchestration
+├── Dockerfile                   # Main Dockerfile (Docker-in-Docker)
+├── .env                         # Environment variables (to create)
+├── .gitignore                   # Git ignored files
+├── README.md                    # This documentation
 │
-├── api-gateway/                 # API Gateway & routage
+├── api-gateway/                 # API Gateway & routing
 │   ├── Dockerfile
 │   ├── package.json
 │   └── src/
 │       └── server.js
 │
-├── auth-service/                # Authentification & autorisation
+├── auth-service/                # Authentication & authorization
 │   ├── Dockerfile
 │   ├── package.json
 │   └── src/
@@ -260,35 +260,35 @@ skyhire-docker/
 │       ├── models/
 │       └── routes/
 │
-├── user-service/                # Gestion des profils utilisateurs
+├── user-service/                # User profile management
 │   ├── Dockerfile
 │   ├── package.json
 │   └── src/
 │
-├── job-service/                 # Offres d'emploi & candidatures
+├── job-service/                 # Job listings & applications
 │   ├── Dockerfile
 │   ├── package.json
 │   └── src/
 │
-├── cv-service/                  # Gestion des CV
+├── cv-service/                  # CV management
 │   ├── Dockerfile
 │   ├── package.json
 │   ├── src/
 │   └── uploads/
 │
-├── cv_parser/                   # Service d'analyse de CV (OCR + NER)
-│   ├── api/                     # API Node.js
+├── cv_parser/                   # CV parsing service (OCR + NER)
+│   ├── api/                     # Node.js API
 │   │   ├── Dockerfile
 │   │   ├── package.json
 │   │   └── server.js
-│   ├── python-service/          # Service Python FastAPI
+│   ├── python-service/          # Python FastAPI service
 │   │   ├── Dockerfile
 │   │   └── server.py
-│   ├── input/                   # Dossier d'entrée des CV
-│   ├── models/                  # Modèles OCR (CRAFT, etc.)
-│   └── src/                     # Code source Python
+│   ├── input/                   # CV input folder
+│   ├── models/                  # OCR models (CRAFT, etc.)
+│   └── src/                     # Python source code
 │
-├── chat-service/                # Messagerie en temps réel
+├── chat-service/                # Real-time messaging
 │   ├── Dockerfile
 │   ├── package.json
 │   └── src/
@@ -298,7 +298,7 @@ skyhire-docker/
 │       ├── routes/
 │       └── sockets/
 │
-├── interview-service/           # Sessions d'entretien
+├── interview-service/           # Interview sessions
 │   ├── Dockerfile
 │   ├── package.json
 │   └── src/
@@ -308,33 +308,33 @@ skyhire-docker/
 │       ├── routes/
 │       └── sockets/
 │
-├── interviewToken-service/      # Génération de tokens Gemini
+├── interviewToken-service/      # Gemini token generation
 │   ├── Dockerfile
 │   ├── package.json
 │   └── src/
 │       ├── app.js
 │       └── authgen.js
 │
-├── chatbot-api/                 # API Chatbot Coach de Carrière
+├── chatbot-api/                 # Career Coach Chatbot API
 │   ├── Dockerfile
 │   ├── main.py                  # FastAPI application
 │   ├── requirements.txt
-│   ├── cabin_docs.json          # Documentation métier
+│   ├── cabin_docs.json          # Business documentation
 │   └── README.md
 │
-├── notifications-service/       # Service de notifications
+├── notifications-service/       # Notification service
 │   ├── Dockerfile
 │   ├── package.json
 │   └── src/
 │
-├── frontend-server/             # Serveur Frontend Principal (Nginx)
+├── frontend-server/             # Main Frontend Server (Nginx)
 │   ├── Dockerfile
 │   └── public-html/
 │       ├── index.html
 │       ├── static/
 │       └── skyrecruiter/
 │
-└── live-interview-server/       # Serveur d'Entretien Live (Nginx)
+└── live-interview-server/       # Live Interview Server (Nginx)
     ├── Dockerfile
     └── public-html/
         ├── index.html
@@ -343,231 +343,231 @@ skyhire-docker/
 
 ## 🔧 Services
 
-### Services Principaux
+### Main Services
 
-| Service | Port | Description | Stack Technique |
+| Service | Port | Description | Tech Stack |
 |---------|------|-------------|-----------------|
-| **Frontend Server** | 80 | Application web principale (Nginx) | Nginx + React |
-| **Live Interview Server** | 81 | Interface d'entretien en direct (Nginx) | Nginx + React |
-| **API Gateway** | 5000 | Route les requêtes vers les microservices | Express.js |
-| **Auth Service** | 5001 | Authentification JWT & autorisation | Express + JWT |
-| **User Service** | 5007 | Profils utilisateurs & connexions | Express + MongoDB |
-| **Job Service** | 5005 | Offres d'emploi & candidatures | Express + MongoDB |
-| **CV Service** | 5003 | Upload & gestion des CV | Express + Multer |
-| **CV Parser API** | 5010 | API d'analyse de CV (Node.js) | Express |
-| **CV Python Service** | 8000 | Service d'analyse OCR/NER (Python) | FastAPI + PaddleOCR |
-| **Chat Service** | 5002 | Messagerie en temps réel | Socket.io |
-| **Interview Service** | 5004 | Sessions d'entretien | Express + Socket.io |
-| **Interview Token** | 5008 | Génération de tokens Gemini | Express + @google/genai |
-| **Chatbot API** | 8000 | API du chatbot coach de carrière | FastAPI + Gemini |
-| **Notifications** | 5006 | Notifications push | Express + MongoDB |
-| **MongoDB** | 27017 | Base de données | MongoDB 7.0 |
+| **Frontend Server** | 80 | Main web application (Nginx) | Nginx + React |
+| **Live Interview Server** | 81 | Live interview interface (Nginx) | Nginx + React |
+| **API Gateway** | 5000 | Routes requests to microservices | Express.js |
+| **Auth Service** | 5001 | JWT authentication & authorization | Express + JWT |
+| **User Service** | 5007 | User profiles & connections | Express + MongoDB |
+| **Job Service** | 5005 | Job listings & applications | Express + MongoDB |
+| **CV Service** | 5003 | CV upload & management | Express + Multer |
+| **CV Parser API** | 5010 | CV parsing API (Node.js) | Express |
+| **CV Python Service** | 8000 | OCR/NER parsing service (Python) | FastAPI + PaddleOCR |
+| **Chat Service** | 5002 | Real-time messaging | Socket.io |
+| **Interview Service** | 5004 | Interview sessions | Express + Socket.io |
+| **Interview Token** | 5008 | Gemini token generation | Express + @google/genai |
+| **Chatbot API** | 8000 | Career coach chatbot API | FastAPI + Gemini |
+| **Notifications** | 5006 | Push notifications | Express + MongoDB |
+| **MongoDB** | 27017 | Database | MongoDB 7.0 |
 
-### Services IA
+### AI Services
 
-| Service | Description | Modèle IA |
+| Service | Description | AI Model |
 |---------|-------------|-----------|
-| **Simulateur d'Entretien** | Entretien vocal IA en temps réel | Gemini 2.5 Flash Live API |
-| **Coach de Carrière** | Conseiller de carrière conversationnel | Gemini Pro |
-| **Analyseur de CV** | Extraction OCR + NER | CRAFT + PaddleOCR + spaCy |
-| **Correspondance d'Emploi** | Recommandations basées sur les compétences | Algorithme ML personnalisé |
+| **Interview Simulator** | Real-time voice AI interview | Gemini 2.5 Flash Live API |
+| **Career Coach** | Conversational career advisor | Gemini Pro |
+| **CV Analyzer** | OCR + NER extraction | CRAFT + PaddleOCR + spaCy |
+| **Job Matching** | Skill-based recommendations | Custom ML algorithm |
 
-## 🤖 Fonctionnalités IA
+## 🤖 AI Features
 
-### 1. Simulateur d'Entretien IA (SkyRecruiter)
+### 1. AI Interview Simulator (SkyRecruiter)
 
-Le joyau de SkyHire - un recruteur IA en temps réel alimenté par l'API Google Gemini Live.
+The crown jewel of SkyHire - a real-time AI recruiter powered by Google Gemini Live API.
 
-**Fonctionnalités :**
-- ✅ Conversation vocale naturelle en temps réel
-- ✅ Persona de recruteur aéronautique spécialisé
-- ✅ Questions comportementales et situationnelles
-- ✅ Retour instantané sur la performance
-- ✅ Capacités d'enregistrement audio
-- ✅ Notation sur la clarté, la confiance et la pertinence
+**Features:**
+- Natural real-time voice conversation
+- Specialized aviation recruiter persona
+- Behavioral and situational questions
+- Instant performance feedback
+- Audio recording capabilities
+- Scoring on clarity, confidence, and relevance
 
-**Technologie :**
-- Google Gemini 2.5 Flash avec support audio natif
-- WebRTC pour le streaming audio
-- Ingénierie de prompt personnalisée pour le contexte aéronautique
-- Transcription et analyse en temps réel
+**Technology:**
+- Google Gemini 2.5 Flash with native audio support
+- WebRTC for audio streaming
+- Custom prompt engineering for aviation context
+- Real-time transcription and analysis
 
-**Utilisation :**
+**Usage:**
 ```
-1. Accédez à http://localhost:81
-2. Cliquez sur "Démarrer l'entretien"
-3. Autorisez l'accès au microphone
-4. Le recruteur IA vous accueillera et commencera à poser des questions
-```
-
-### 2. Analyseur de CV avec OCR
-
-Analyse intelligente de CV utilisant des technologies OCR et NER de pointe.
-
-**Capacités :**
-- Extraire les informations personnelles (nom, email, téléphone)
-- Analyser l'historique éducatif avec dates et diplômes
-- Identifier l'expérience professionnelle et les responsabilités
-- Extraire les compétences et certifications
-- Détection de la maîtrise des langues
-- Reconnaissance de mots-clés spécifiques à l'aéronautique
-
-**Stack Technologique :**
-- CRAFT pour la détection de texte
-- PaddleOCR pour la reconnaissance de texte
-- spaCy NER pour l'extraction d'entités
-- Entraînement personnalisé sur 500+ CV aéronautiques
-
-### 3. Chatbot Coach de Carrière
-
-Conseiller de carrière alimenté par l'IA utilisant Gemini Pro.
-
-**Fonctionnalités :**
-- Conseils de préparation aux entretiens
-- Conseils de rédaction de CV
-- Recommandations de parcours professionnel
-- Conseils de négociation salariale
-- Assistance à la recherche d'entreprises
-- Perspectives sur l'industrie aéronautique
-
-**Exemples d'Interactions :**
-```
-Utilisateur : "Comment dois-je me préparer pour un entretien de personnel de cabine ?"
-Coach : "Excellente question ! Pour les entretiens de personnel de cabine, concentrez-vous sur..."
-
-Utilisateur : "Quelles compétences sont les plus importantes pour les agents de bord ?"
-Coach : "Les principales compétences recherchées par les compagnies aériennes incluent..."
+1. Navigate to http://localhost:81
+2. Click "Start Interview"
+3. Allow microphone access
+4. The AI recruiter will greet you and begin asking questions
 ```
 
-### 4. Correspondance d'Emploi Intelligente
+### 2. CV Analyzer with OCR
 
-Système de recommandation d'emplois basé sur le ML.
+Intelligent CV analysis using state-of-the-art OCR and NER technologies.
 
-**Algorithme :**
-- Vectorisation TF-IDF des descriptions de poste et des CV
-- Score de similarité cosinus
-- Analyse des lacunes en compétences
-- Correspondance du niveau d'expérience
-- Préférences de localisation et de salaire
-- Recommandations de progression de carrière
+**Capabilities:**
+- Extract personal information (name, email, phone)
+- Analyze educational history with dates and degrees
+- Identify professional experience and responsibilities
+- Extract skills and certifications
+- Language proficiency detection
+- Aviation-specific keyword recognition
+
+**Tech Stack:**
+- CRAFT for text detection
+- PaddleOCR for text recognition
+- spaCy NER for entity extraction
+- Custom training on 500+ aviation CVs
+
+### 3. Career Coach Chatbot
+
+AI-powered career advisor using Gemini Pro.
+
+**Features:**
+- Interview preparation advice
+- CV writing guidance
+- Career path recommendations
+- Salary negotiation tips
+- Company research assistance
+- Aviation industry insights
+
+**Example Interactions:**
+```
+User: "How should I prepare for a cabin crew interview?"
+Coach: "Great question! For cabin crew interviews, focus on..."
+
+User: "What skills are most important for flight attendants?"
+Coach: "The top skills airlines look for include..."
+```
+
+### 4. Smart Job Matching
+
+ML-based job recommendation system.
+
+**Algorithm:**
+- TF-IDF vectorization of job descriptions and CVs
+- Cosine similarity scoring
+- Skills gap analysis
+- Experience level matching
+- Location and salary preferences
+- Career progression recommendations
 
 ## 📚 Documentation
 
-### Liens Rapides
+### Quick Links
 
-- **Frontend Principal :** http://localhost
-- **Interface d'Entretien :** http://localhost:81
-- **API Gateway :** http://localhost:5000
-- **API Chatbot :** http://localhost:8000
-- **MongoDB :** mongodb://localhost:27017
+- **Main Frontend:** http://localhost
+- **Interview Interface:** http://localhost:81
+- **API Gateway:** http://localhost:5000
+- **Chatbot API:** http://localhost:8000
+- **MongoDB:** mongodb://localhost:27017
 
-### Endpoints API Principaux
+### Main API Endpoints
 
-- **Vérification de santé API :** `GET http://localhost:5000/api/health`
-- **Service de tokens d'entretien :** `GET http://localhost:5008/token`
-- **API Chatbot :** `POST http://localhost:8000/chat`
+- **API Health Check:** `GET http://localhost:5000/api/health`
+- **Interview Token Service:** `GET http://localhost:5008/token`
+- **Chatbot API:** `POST http://localhost:8000/chat`
 
-## 🧪 Tests
+## 🧪 Testing
 
-### Test des Services Backend
+### Backend Services Testing
 ```bash
-# Vérifier tous les conteneurs en cours d'exécution
+# Check all running containers
 docker-compose ps
 
-# Vérifier les logs d'un service spécifique
+# Check logs for specific service
 docker-compose logs -f api-gateway
 docker-compose logs -f interview-token-service
 docker-compose logs -f chatbot-api
 
-# Tester des services spécifiques
+# Test specific services
 curl http://localhost:5000/api/health
 curl http://localhost:5008/token
-curl http://localhost:8000/docs  # Documentation FastAPI
+curl http://localhost:8000/docs  # FastAPI documentation
 ```
 
-### Test du Simulateur d'Entretien
+### Interview Simulator Testing
 ```bash
-# 1. Démarrer les services backend
+# 1. Start backend services
 docker-compose up -d
 
-# 2. Vérifier que tous les services sont en cours d'exécution
+# 2. Verify all services are running
 docker-compose ps
 
-# 3. Accéder à http://localhost:81
-# 4. Cliquer sur "Démarrer l'entretien" et tester avec votre microphone
+# 3. Access http://localhost:81
+# 4. Click "Start Interview" and test with your microphone
 ```
 
-### Test de l'Analyseur de CV
+### CV Analyzer Testing
 ```bash
-# Uploader un CV via l'interface web
-# Ou utiliser l'API directement
+# Upload a CV via web interface
+# Or use API directly
 curl -X POST http://localhost:5010/parse \
   -F "file=@/path/to/cv.pdf"
 ```
 
-## 🐳 Commandes Docker
+## 🐳 Docker Commands
 
 ```bash
-# Démarrer tous les services
+# Start all services
 docker-compose up -d
 
-# Démarrer avec reconstruction
+# Start with rebuild
 docker-compose up -d --build
 
-# Voir les logs de tous les services
+# View logs for all services
 docker-compose logs -f
 
-# Voir les logs d'un service spécifique
-docker-compose logs -f <nom-du-service>
-# Exemples:
+# View logs for specific service
+docker-compose logs -f <service-name>
+# Examples:
 docker-compose logs -f api-gateway
 docker-compose logs -f interview-token-service
 docker-compose logs -f chatbot-api
 
-# Arrêter tous les services
+# Stop all services
 docker-compose down
 
-# Arrêter et supprimer les volumes
+# Stop and remove volumes
 docker-compose down -v
 
-# Voir les conteneurs en cours d'exécution
+# View running containers
 docker ps
 
-# Voir tous les conteneurs (y compris arrêtés)
+# View all containers (including stopped)
 docker ps -a
 
-# Redémarrer un service spécifique
-docker-compose restart <nom-du-service>
+# Restart specific service
+docker-compose restart <service-name>
 
-# Reconstruire un service spécifique
-docker-compose build <nom-du-service>
+# Rebuild specific service
+docker-compose build <service-name>
 
-# Voir l'utilisation des ressources
+# View resource usage
 docker stats
 
-# Nettoyer les ressources inutilisées
+# Clean up unused resources
 docker system prune -a
 ```
 
-## 🔐 Variables d'Environnement
+## 🔐 Environment Variables
 
-### Fichier .env Principal
+### Main .env File
 ```env
-# Configuration JWT
-JWT_SECRET=votre_cle_secrete_ici
+# JWT Configuration
+JWT_SECRET=your_secret_key_here
 JWT_EXPIRE=7d
 
-# API Google Gemini
-GEMINI_API_LIVE_TOKEN=votre_cle_api_gemini
-CHATBOT_TOKEN=votre_cle_api_gemini
+# Google Gemini API
+GEMINI_API_LIVE_TOKEN=your_gemini_api_key
+CHATBOT_TOKEN=your_gemini_api_key
 
 # MongoDB
 MONGODB_URI=mongodb://mongodb:27017/skyhire
 
-# Environnement
+# Environment
 NODE_ENV=production
 
-# Ports des Services
+# Service Ports
 API_GATEWAY_PORT=5000
 AUTH_SERVICE_PORT=5001
 CHAT_SERVICE_PORT=5002
@@ -581,161 +581,127 @@ CV_PARSER_SERVICE_PORT=5010
 FRONT_SERVER_PORT=80
 INTERVIEW_SERVER_PORT=81
 
-# Configuration Upload
+# Upload Configuration
 UPLOAD_PATH=./uploads/cv
 MAX_FILE_SIZE=5242880
 ```
 
-### Obtenir une Clé API Gemini
+### Getting Gemini API Key
 
-1. Accédez à [Google AI Studio](https://aistudio.google.com/app/apikey)
-2. Connectez-vous avec votre compte Google
-3. Créez une nouvelle clé API
-4. Copiez la clé et ajoutez-la à votre fichier `.env`
+1. Go to [Google AI Studio](https://aistudio.google.com/app/apikey)
+2. Sign in with your Google account
+3. Create a new API key
+4. Copy the key and add it to your `.env` file
 
-## 🐛 Dépannage
+## 🐛 Troubleshooting
 
-### Problème : Les services ne démarrent pas
+### Issue: Services won't start
 
-**Solution :**
+**Solution:**
 ```bash
-# Vérifier que Docker est en cours d'exécution
+# Verify Docker is running
 docker info
 
-# Redémarrer Docker Desktop
-# Puis redémarrer les services
+# Restart Docker Desktop
+# Then restart services
 docker-compose down
 docker-compose up -d --build
 ```
 
-### Problème : "Aucun token généré"
+### Issue: "No token generated"
 
-**Solution :**
-- Vérifiez `GEMINI_API_LIVE_TOKEN` dans `.env`
-- Vérifiez les logs du service de tokens : `docker-compose logs interview-token-service`
-- Régénérez la clé API sur https://aistudio.google.com/app/apikey
-- Redémarrez le service : `docker-compose restart interview-token-service`
+**Solution:**
+- Check `GEMINI_API_LIVE_TOKEN` in `.env`
+- Check token service logs: `docker-compose logs interview-token-service`
+- Regenerate API key at https://aistudio.google.com/app/apikey
+- Restart service: `docker-compose restart interview-token-service`
 
-### Problème : Échec de connexion à MongoDB
+### Issue: MongoDB connection failed
 
-**Solution :**
+**Solution:**
 ```bash
-# Vérifier que MongoDB est en cours d'exécution
+# Check if MongoDB is running
 docker-compose ps | findstr mongo
 
-# Redémarrer MongoDB
+# Restart MongoDB
 docker-compose restart mongodb
 
-# Vérifier les logs MongoDB
+# Check MongoDB logs
 docker-compose logs mongodb
 ```
 
-### Problème : Le simulateur d'entretien ne répond pas
+### Issue: Interview simulator not responding
 
-**Solution :**
-- Autorisez l'accès au microphone dans les paramètres du navigateur
-- Utilisez Chrome ou Edge (meilleur support WebRTC)
-- Vérifiez la console du navigateur (F12) pour les erreurs
-- Vérifiez la génération de token : `curl http://localhost:5008/token`
-- Redémarrez le service d'entretien : `docker-compose restart interview-service`
+**Solution:**
+- Allow microphone access in browser settings
+- Use Chrome or Edge (better WebRTC support)
+- Check browser console (F12) for errors
+- Check token generation: `curl http://localhost:5008/token`
+- Restart interview service: `docker-compose restart interview-service`
 
-### Problème : Le chatbot ne répond pas
+### Issue: Chatbot not responding
 
-**Solution :**
+**Solution:**
 ```bash
-# Vérifier les logs du chatbot
+# Check chatbot logs
 docker-compose logs chatbot-api
 
-# Vérifier que la clé API Gemini est correcte
-# Tester l'endpoint directement
+# Verify Gemini API key is correct
+# Test endpoint directly
 curl http://localhost:8000/docs
 ```
 
-### Problème : Port déjà utilisé
+### Issue: Port already in use
 
-**Solution :**
+**Solution:**
 ```bash
-# Voir les processus utilisant un port spécifique (exemple : 5000)
+# View processes using specific port (example: 5000)
 netstat -ano | findstr :5000
 
-# Arrêter le processus ou changer le port dans .env
-# Puis redémarrer les services
+# Stop the process or change port in .env
+# Then restart services
 docker-compose down
 docker-compose up -d
 ```
 
-### Problème : Erreurs de build Docker
+### Issue: Docker build errors
 
-**Solution :**
+**Solution:**
 ```bash
-# Nettoyer le cache Docker
+# Clean Docker cache
 docker system prune -a
 
-# Reconstruire tout depuis zéro
+# Rebuild everything from scratch
 docker-compose down -v
 docker-compose build --no-cache
 docker-compose up -d
 ```
 
-## 🤝 Contribution
+## 🙏 Acknowledgments
 
-Nous accueillons les contributions ! Veuillez suivre ces étapes :
-
-1. Forkez le dépôt
-2. Créez une branche de fonctionnalité (`git checkout -b feature/NouvelleFonctionnalite`)
-3. Committez vos changements (`git commit -m 'Ajout d'une nouvelle fonctionnalité'`)
-4. Poussez vers la branche (`git push origin feature/NouvelleFonctionnalite`)
-5. Ouvrez une Pull Request
-
-### Directives de Développement
-
-- Suivez les meilleures pratiques Node.js et Python
-- Écrivez des tests pour les nouvelles fonctionnalités
-- Mettez à jour la documentation
-- Suivez les messages de commit conventionnels
-- Assurez-vous que les builds Docker réussissent
-- Testez localement avant de pousser
-
-### Configuration Git
-
-```bash
-# Configurer votre nom d'utilisateur et email
-git config --global user.name "Votre Nom"
-git config --global user.email "votre.email@example.com"
-
-# Vérifier la configuration
-git config --global --list
-```
-
-## 📝 Licence
-
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
-
-## 🙏 Remerciements
-
-- **Google Gemini API** pour fournir des capacités IA de pointe
-- **MongoDB** pour la solution de base de données robuste
-- **Docker** pour simplifier le déploiement
-- **Communauté Open Source** pour les outils et bibliothèques incroyables
-- **FastAPI** pour le framework Python haute performance
-- **Node.js & Express** pour l'écosystème backend solide
+- **Google Gemini API** for providing cutting-edge AI capabilities
+- **MongoDB** for robust database solution
+- **Docker** for simplifying deployment
+- **Open Source Community** for amazing tools and libraries
+- **FastAPI** for high-performance Python framework
+- **Node.js & Express** for solid backend ecosystem
 
 ## 📞 Support
 
-Pour toute question ou problème :
-- Ouvrez une issue sur GitHub
-- Consultez la documentation
-- Vérifiez les logs Docker pour les erreurs
+For any questions or issues:
+- Open an issue on GitHub
+- Check the documentation
+- Check Docker logs for errors
 
-## 🚀 Améliorations Futures
+## 🚀 Future Enhancements
 
-- [ ] Authentification OAuth2 (Google, LinkedIn)
-- [ ] Analyse avancée et rapports
-- [ ] Application mobile (React Native)
-- [ ] Support multilingue
-- [ ] Intégration avec les ATS (Applicant Tracking Systems)
-- [ ] Recommandations de formation personnalisées
-- [ ] Intégration de vidéoconférence
-- [ ] Tests A/B pour l'optimisation du recrutement
+- [ ] OAuth2 authentication (Google, LinkedIn)
+- [ ] Advanced analytics and reporting
+- [ ] Mobile application (React Native)
+- [ ] Multi-language support
+- [ ] ATS (Applicant Tracking Systems) integration
+- [ ] Personalized training recommendations
+- [ ] Video conferencing integration
+- [ ] A/B testing for recruitment optimization
 
 ---
